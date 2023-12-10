@@ -1,5 +1,6 @@
 import * as React from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 
 import { cn } from '@/lib/utils'
 import { auth } from '@/auth'
@@ -8,7 +9,10 @@ import { Button, buttonVariants } from '@/components/ui/button'
 import { Sidebar } from '@/components/sidebar'
 import { SidebarList } from '@/components/sidebar-list'
 import {
+  IconArrowElbow,
+  IconExternalLink,
   IconGitHub,
+  IconMessage,
   IconNextChat,
   IconSeparator,
   IconVercel
@@ -33,9 +37,10 @@ async function UserOrLogin() {
           <SidebarToggle />
         </>
       ) : (
-        <Link href="/" target="_blank" rel="nofollow">
-          <IconNextChat className="w-6 h-6 mr-2 dark:hidden" inverted />
-          <IconNextChat className="hidden w-6 h-6 mr-2 dark:block" />
+        <Link href="/" passHref>
+          <div target="_blank" rel="nofollow">
+            <Image src="/images/logo.svg" alt="Hero Logo" width={24} height={24} />
+          </div>
         </Link>
       )}
       <div className="flex items-center">
@@ -67,17 +72,17 @@ export function Header() {
           rel="noopener noreferrer"
           className={cn(buttonVariants({ variant: 'outline' }))}
         >
-          <IconGitHub />
-          <span className="hidden ml-2 md:flex">GitHub</span>
+          <IconMessage />
+          <span className="hidden ml-2 md:flex">FeedBack</span>
         </a>
         <a
-          href="https://github.com/vercel/nextjs-ai-chatbot/"
+          href="https://www.linkedin.com/in/praveenmanchi/"
           target="_blank"
           className={cn(buttonVariants())}
         >
-          <IconVercel className="mr-2" />
-          <span className="hidden sm:block">Deploy to Vercel</span>
-          <span className="sm:hidden">load</span>
+          <IconExternalLink className="mr-2" />
+          <span className="hidden sm:block">Praveen Manchi</span>
+          <span className="sm:hidden">Praveen Manchi</span>
         </a>
       </div>
     </header>

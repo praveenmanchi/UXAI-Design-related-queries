@@ -13,7 +13,7 @@ export function FooterText({ className, ...props }: React.ComponentProps<'p'>) {
       {...props}
     >
       We are feeding, fine-tuning, and training our model. A little or full contain has misleading information is to be expected. {' '}
-      <ExternalLink href="https://nextjs.org">Submit Feedback</ExternalLink>
+      {/* <ExternalLink href="https://nextjs.org">Submit Feedback</ExternalLink> */}
        {/* and{' '}
       <ExternalLink href="https://vercel.com/storage/kv">
         Vercel KV

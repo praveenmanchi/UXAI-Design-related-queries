@@ -76,3 +76,24 @@
     @apply bg-background text-foreground;
   }
 }
+/* GradientText.module.css or in your global CSS file */
+@keyframes gradientAnimation {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.gradientText {
+  background: linear-gradient(45deg, #6dd5ed, #2193b0, #6dd5ed);
+  background-size: 200% 200%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: gradientAnimation 5s ease infinite;
+}
+
+.gradientParagraph {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 16px;
+}
