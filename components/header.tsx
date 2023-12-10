@@ -4,22 +4,8 @@ import Image from 'next/image'
 
 import { cn } from '@/lib/utils'
 import { auth } from '@/auth'
-import { clearChats } from '@/app/actions'
 import { Button, buttonVariants } from '@/components/ui/button'
-import { Sidebar } from '@/components/sidebar'
-import { SidebarList } from '@/components/sidebar-list'
-import {
-  IconArrowElbow,
-  IconExternalLink,
-  IconGitHub,
-  IconMessage,
-  IconNextChat,
-  IconSeparator,
-  IconVercel
-} from '@/components/ui/icons'
-import { SidebarFooter } from '@/components/sidebar-footer'
-import { ThemeToggle } from '@/components/theme-toggle'
-import { ClearHistory } from '@/components/clear-history'
+import { IconMessage, IconExternalLink, IconSeparator, IconNextChat } from '@/components/ui/icons'
 import { UserMenu } from '@/components/user-menu'
 import { SidebarMobile } from './sidebar-mobile'
 import { SidebarToggle } from './sidebar-toggle'
@@ -37,10 +23,9 @@ async function UserOrLogin() {
           <SidebarToggle />
         </>
       ) : (
-        <Link href="/" passHref>
-          <div target="_blank" rel="nofollow">
-            <Image src="/images/logo.svg" alt="Hero Logo" width={24} height={24} />
-          </div>
+        <Link href="/" target="_blank" rel="nofollow">
+          <IconNextChat className="w-6 h-6 mr-2 dark:hidden" inverted />
+          <IconNextChat className="hidden w-6 h-6 mr-2 dark:block" />
         </Link>
       )}
       <div className="flex items-center">
@@ -56,6 +41,7 @@ async function UserOrLogin() {
     </>
   )
 }
+
 
 export function Header() {
   return (
