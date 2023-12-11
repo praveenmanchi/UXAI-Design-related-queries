@@ -11,10 +11,10 @@ import { Header } from '@/components/header'
 export const metadata = {
   metadataBase: new URL(`https://${process.env.VERCEL_URL}`),
   title: {
-    default: 'Next.js AI Chatbot',
-    template: `%s - Next.js AI Chatbot`
+    default: 'UXAI-Praveen',
+    template: `%s - UXAI Chatbot`
   },
-  description: 'An AI-powered chatbot template built with Next.js and Vercel.',
+  description: 'Discover UXAl, an Al-integrated platform designed to assist UX/Ul designers in answering their design-related queries. By Praveen Manchi',
   icons: {
     icon: '/favicon.ico',
     shortcut: '/favicon-16x16.png',
